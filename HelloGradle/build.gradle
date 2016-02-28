@@ -6,6 +6,10 @@ apply plugin: 'application'
 
 mainClassName='pl.decerto.workshop.gradle.Main'
 
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.11'
+}
+
 repositories {
 	mavenCentral()
 }
