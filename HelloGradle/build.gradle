@@ -4,11 +4,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName='pl.decerto.workshop.gradle.Main'
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '2.11'
-}
+mainClassName = "pl.decerto.workshop.gradle.Main"
 
 repositories {
 	mavenCentral()
@@ -16,4 +12,8 @@ repositories {
 
 dependencies {
 	compile 'log4j:log4j:1.2.17'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.11'
 }
