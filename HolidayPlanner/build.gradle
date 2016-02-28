@@ -6,13 +6,14 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
 
 apply plugin: 'spring-boot'
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'groovy'
 
 war {
 	baseName = 'HolidayPlanner'
@@ -35,6 +36,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile "org.codehaus.groovy:groovy-all:2.4.1"
+	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
 
 }
 
