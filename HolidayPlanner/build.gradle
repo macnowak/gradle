@@ -13,7 +13,7 @@ buildscript {
 apply plugin: 'spring-boot'
 apply plugin: 'java'
 apply plugin: 'war'
-//apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+apply from: 'gretty.plugin'
 apply plugin: 'groovy'
 apply plugin: 'checkstyle'
 
@@ -22,12 +22,12 @@ war {
 	version = '0.0.1-SNAPSHOT'
 }
 
-//gretty {
-//	// supported values:
-//	// 'jetty7', 'jetty8', 'jetty9', 'tomcat7', 'tomcat8'
-//	springBoot = true
-//	servletContainer = 'jetty9'
-//}
+gretty {
+	// supported values:
+	// 'jetty7', 'jetty8', 'jetty9', 'tomcat7', 'tomcat8'
+	springBoot = true
+	servletContainer = 'jetty9'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
